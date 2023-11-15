@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(const char *str)
 {
@@ -24,9 +24,11 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
+/*
 int	main(void)
 {
 	char lstr[] = "hola";
 	printf("%i\n", ft_strlen(lstr));
 	return (0);
 }
+*/

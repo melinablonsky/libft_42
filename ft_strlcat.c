@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<libc.h>
+#include "libft.h"
 
 size_t ft_strlcat(char *restrict dst, const char * restrict src, size_t dstsize)
 {
@@ -39,6 +38,7 @@ size_t ft_strlcat(char *restrict dst, const char * restrict src, size_t dstsize)
 	return j;
 }
 
+/*
 int main()
 {
 	char dst[] = "hola";
@@ -52,3 +52,4 @@ int main()
 	printf("strlcat = %s\n",dst);
 	return (0);
 }
+*/

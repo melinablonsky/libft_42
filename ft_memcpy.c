@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <libc.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -31,7 +30,7 @@ int main() // opcion 1
     printf("lb = %s\n", dst2);
 
 }
-*/
+
 int main () //opcion 2
 {
 	char *destino;
@@ -53,3 +52,4 @@ int main () //opcion 2
 	printf("lb = %s\n", destino2);
 	return 0;
 }
+*/

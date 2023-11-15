@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<libc.h>
+#include "libft.h"
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -31,6 +30,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     return(dst);
 }
 
+/*
 int main ()
 {
     // SI NO SE SOLAPAN:
@@ -50,3 +50,4 @@ int main ()
     ft_memmove(dst2, src2, 3);
 	printf("ft = %s\n", dst2);
 }
+*/

@@ -9,13 +9,16 @@
 /*   Updated: 2023/09/20 11:02:40 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	return (isalpha(c) || isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 
+
+/*
 int	main(void)
 {
 	int	m;
@@ -24,3 +27,4 @@ int	main(void)
 	printf ("%i\n", m);
 	return (0);
 }
+*/

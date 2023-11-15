@@ -10,23 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
-
-//bzero
-void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*ptr_s;
-	size_t	i;
-
-	ptr_s = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		ptr_s[i] = 0;
-		i++;
-	}
-}
+#include "libft.h"
 
 //ft_calloc.c
 
@@ -50,6 +34,11 @@ void *ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, final_size);
 	return ptr;
 }
+
+
+
+
+/*
 int main()
 {
 	size_t num_elements = 5;
@@ -83,3 +72,4 @@ int main()
 	
 	return (0);
 }
+*/

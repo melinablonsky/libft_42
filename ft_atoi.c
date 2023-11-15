@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -42,6 +42,8 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
+
+/*
 int main()
 {
 	const char *string1 = "   123";
@@ -55,3 +57,4 @@ int main()
 	printf("0  = %d\n", ft_atoi(string4));
 	return 0;
 }
+*/

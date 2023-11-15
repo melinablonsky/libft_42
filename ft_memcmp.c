@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -34,6 +34,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	return 0;
 }
 
+/*
 int main (void)
 {
 	const void *s1_c = "abc";
@@ -45,3 +46,4 @@ int main (void)
 	result = ft_memcmp("ab", "ac", 2);
 	printf("menor = %d\n", result);
 }
+*/

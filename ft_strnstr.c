@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -39,6 +39,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return NULL;
 }
 
+/*
 int main(void)
 {
 	char	main_str[]="Foo Bar Baz";
@@ -47,3 +48,4 @@ int main(void)
 	printf("%s", ft_strnstr(main_str, second_str, slen));
 }
 
+*/

@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<libc.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *restrict dst, const char * restrict src, size_t dstsize)
 {
@@ -31,6 +30,7 @@ size_t ft_strlcpy(char *restrict dst, const char * restrict src, size_t dstsize)
 	return i;
 }
 
+/*
 int main()
 {
 	char dst[] = "hola";
@@ -44,3 +44,4 @@ int main()
 	printf("strlcpy =  %s\n", dst);
 	return (0);
 }
+*/

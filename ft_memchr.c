@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <libc.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -22,6 +21,8 @@ while (i < n)
 	return NULL;
 }
 
+
+/*
 int main ()
 {
 	char *ptr;
@@ -32,3 +33,4 @@ int main ()
 	printf( "la = %s\n", ptr);
 	
 }
+*/
