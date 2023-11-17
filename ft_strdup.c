@@ -1,19 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 15:00:34 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/01 15:40:12 by mblonsky         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include<stdio.h>
+#include<libc.h>
 
-#include "libft.h"
+char *ft_strdup(const char *s1)
+{   
+    size_t len;
 
-char *strdup(const char *s1)
-{
+    len = ft_strlen(s1) + 1; // para incluir el caracter nulo.
 
+    char *dup;
+
+    dup = (char *)malloc(len); //con malloc asigno "len" espacio de memoria (tamaño de s1 + 1). Malloc devuelve un puntero a ese espacio de memoria, pero es de tipo void, entonces lo casteamos a char.
+    if (dup != NULL)
+    {
+        strlcpy(dup, s1, len);
+        printf("ft = %s\n", dup);
+        return(dup);
+    }
 }
 
+int main ()
+{
+    char *s2;
+
+    s2 = "hello";
+
+    ft_strdup(s2);
+    return (0);
+}
