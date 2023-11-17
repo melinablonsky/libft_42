@@ -38,6 +38,7 @@ SRC = ft_atoi.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_split.c \
+		ft_substr.c \
 
 OBJS = $(SRC:.c=.o)
 all: $(NAME)

@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int main()
+/*int main()
 {
 	char	*string = "hola que tal";
 	int	c = ' ';
@@ -9,4 +9,14 @@ int main()
 	(void)result;
     
 
+}*/
+
+int main()
+{
+	char s[] = "hello";
+	char start = 'e';
+
+	ft_substr(s, start, 3);
+	printf(" = %s\n", s);
+	return (0);
 }

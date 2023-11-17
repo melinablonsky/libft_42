@@ -21,7 +21,7 @@ char **ft_split(char const *s, char c)
 
 	i=0;
 	ptr_copy = (char*)s;
-	while (ptr_copy != '\0')
+	while (ptr_copy != NULL)
 	{
 		ptr_copy = ft_strchr(ptr_copy, c);
 		i++;
