@@ -39,6 +39,6 @@ int     ft_strlen(const char *str);
 int     ft_strncmp(const char *s1, const char *s2, size_t n);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr (const char *s, int c);
-
+char    **ft_split(char const *s, char c);
 
 #endif

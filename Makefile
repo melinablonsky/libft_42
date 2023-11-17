@@ -37,12 +37,12 @@ SRC = ft_atoi.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
+		ft_split.c \
 
 OBJS = $(SRC:.c=.o)
 all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-bonus: $(NAME)
 clean:
 	$(RM) $(OBJS)
 fclean: clean

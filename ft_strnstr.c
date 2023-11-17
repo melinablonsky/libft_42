@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 12:52:34 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/10/23 14:24:32 by mblonsky         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
+#include <stdio.h>
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -21,7 +9,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	j = 0;
 	if (needle[j] == '\0')
 	{
-		return (char *)haystack;
+		return (char *)haystack;  // (no entiendo esto) esto es un puntero temporal --> si la funcion es char *ft en vez de const char *ft, da un error porque la funcion esta declarada para devolver un puntero char pero esta intentando devolver un puntero const char. por eso se usa un puntero temporal. no entiendo esto.
 	}
 	while (haystack[i] != '\0')
 	{
@@ -29,7 +17,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			j++;
 		}
-		if (needle[j] == '\0')
+		if (needle[j] == '\0' || j == len)
 		{
 			return (char *)(haystack + i);
 		}
@@ -39,13 +27,13 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return NULL;
 }
 
-/*
 int main(void)
 {
-	char	main_str[]="Foo Bar Baz";
-	char	second_str[] = "Bar";
-	size_t slen = 2;
-	printf("%s", ft_strnstr(main_str, second_str, slen));
+	printf("1) everything from and after B = %s\n", ft_strnstr("Foo Bar Baz", "Bar", 1));
+    printf("2) everything from and after Ba = %s\n", ft_strnstr("Foo Bar Baz", "Bar", 2));
+    printf("3) everything from and after Bar = %s\n", ft_strnstr("Foo Bar Baz", "Bar", 3));
+    printf("4) everything from and after Bar = %s\n", ft_strnstr("Foo Bar Baz", "Bar", 4));
+    printf("5) everything from and after Ba = %s\n", ft_strnstr("Foo Bar Baz", "Bax", 2));
+    printf("6) NULL = %s\n", ft_strnstr("Foo Bar Baz", "Bax", 3));
+    printf("7) Foo Bar Baz = %s\n", ft_strnstr("Foo Bar Baz", "", 2));
 }
-
-*/
