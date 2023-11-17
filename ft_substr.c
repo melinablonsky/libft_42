@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 15:00:34 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/16 11:56:59 by mblonsky         ###   ########.fr       */
+/*   Created: 2023/11/16 11:43:27 by mblonsky          #+#    #+#             */
+/*   Updated: 2023/11/16 11:51:05 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char *ft_strdup(const char *s1)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-(void)s1;
-return 0;
-}
 
+}

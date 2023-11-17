@@ -1,20 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 15:00:34 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/16 11:56:59 by mblonsky         ###   ########.fr       */
+/*   Created: 2023/11/15 20:05:46 by mblonsky          #+#    #+#             */
+/*   Updated: 2023/11/16 11:52:50 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<stdlib.h>
+#include<stdio.h>
 
-#include "libft.h"
-
-char *ft_strdup(const char *s1)
+char **ft_split(char const *s, char c)
 {
-(void)s1;
-return 0;
+	size_t	i;
+	char *ptr_n;
+
+	i=0;
+	while (s[i])
+	{
+		while (s[i] != '\0')
+		{
+			ft_strchr(s, c);
+			i++;
+		}
+		ptr_n = s[i];
+	}
+
+
+
 }
 
+int main()
+{
+	char	*string = "hola que tal";
+	int	c = ' ';
+
+	char	*result = ft_strchr(string, c);
+	printf("%s\n", result);
+}
