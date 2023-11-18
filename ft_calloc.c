@@ -16,11 +16,6 @@
 
 void *ft_calloc(size_t count, size_t size)
 {
-/*	if (count == 0 || size == 0)
-	{
-		return NULL;  // esta comprobacion esta mal porque malloc solo devuelve null si falla y si count*size da cero,  no es un fallo. 
-	}
-*/
 	size_t final_size;
 	void *ptr;
 	

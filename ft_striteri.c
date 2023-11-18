@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/18 20:34:47 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/18 20:34:51 by mblonsky         ###   ########.fr       */
+/*   Created: 2023/11/18 16:56:53 by mblonsky          #+#    #+#             */
+/*   Updated: 2023/11/18 16:56:59 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper (int c)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    if (c >= 'a' && c<= 'z')
+    int i;
+
+    if (!s || !f)
     {
-        c = (c - 32);
+        return ;
     }
-    return (c);
-}
+    i = 0;
 
-/*int main(void)
-{
-    int upperc;
-
-    upperc = ft_toupper('9');
-    printf("%c\n", upperc);
-    return(0);
+    while (s[i])
+    {
+        f(i, &s[i]);
+        i++;
+    }
 }
-*/

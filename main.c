@@ -60,4 +60,31 @@ int main()
 	ft_putnbr_fd(n, fd);
 	return(0);
 }
+
+//ft_striteri (no funciona)
+int main()
+{
+	char s[]="hola";
+
+	ft_striteri(s, print_index_and_char);
+	return (0);
+}
+
+
+//ft_strdup
+int main()
+{
+	char s2[] = "hello";
+	char *result = ft_strdup(s2);
+	printf("%s\n", result);
+	return (0);
+}
 */
+int main()
+{
+	char *result;
+
+	result = ft_strjoin("porfavor", "funciona");
+	printf("%s\n", result);
+	return(0);
+}

@@ -14,7 +14,7 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-if (s != NULL) // quiero chequear primero si s en nullo pero no puedo subirlo porque me queda la creacion de la variable en el if, y no quiero cambiar el write metiendo ft adentro del parentesis porque despues me cuesta entenderla.
+if (s != NULL) // DUDA: quiero chequear primero si s en nullo pero no puedo subirlo porque me queda la creacion de la variable en el if, y no quiero cambiar el write metiendo ft adentro del parentesis porque despues me cuesta entenderla.
     {
         write(fd, s, ft_strlen(s));
     }
