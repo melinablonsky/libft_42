@@ -17,12 +17,14 @@ int main()
 int main()
 {
 	char s[] = "hello";
-	char start = 'e';
+	int start = 3;
+	char *result;
 
-	ft_substr(s, start, 3);
-	printf(" = %s\n", s);
+	result = ft_substr(s, start, 2);
+	printf(" = %s\n", result);
 	return (0);
 }
+
 
 //ft_putchar_fd
 int main()
@@ -66,7 +68,7 @@ int main()
 {
 	char s[]="hola";
 
-	ft_striteri(s, print_index_and_char);
+	ft_striteri(s, &printf);
 	return (0);
 }
 
@@ -74,12 +76,13 @@ int main()
 //ft_strdup
 int main()
 {
-	char s2[] = "hello";
+	char s2[] = "hello world";
 	char *result = ft_strdup(s2);
 	printf("%s\n", result);
 	return (0);
 }
-*/
+
+//ft_strjoin
 int main()
 {
 	char *result;
@@ -87,4 +90,26 @@ int main()
 	result = ft_strjoin("porfavor", "funciona");
 	printf("%s\n", result);
 	return(0);
+}
+
+//ft_strtrim
+int main()
+{
+	char *result;
+
+	result = ft_strtrim("@por@favor@@@", "@");
+	printf("%s\n", result);
+	return(0);
+}
+*/
+
+int main()
+{
+	int n = -2147483648;
+
+	char *result;
+	
+	result = ft_itoa(n);
+	printf("%s\n", result);
+	return (0);
 }
