@@ -49,6 +49,7 @@ SRC = ft_atoi.c \
 		ft_toupper.c \
 		ft_strtrim.c \
 		ft_itoa.c \
+		ft_strmapi.c \
 
 OBJS = $(SRC:.c=.o)
 all: $(NAME)

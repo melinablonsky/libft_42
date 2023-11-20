@@ -41,20 +41,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-
-/*
-int main()
-{
-	const char *string1 = "   123";
-	const char *string2 = "   -456";
-	const char *string3 = "   +789";
-	const char *string4 = "   abc123";
-
-	printf("123 = %d\n", ft_atoi(string1));
-	printf("-456 = %d\n", ft_atoi(string2));
-	printf("789 = %d\n", ft_atoi(string3));
-	printf("0  = %d\n", ft_atoi(string4));
-	return 0;
-}
-*/
