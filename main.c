@@ -1,13 +1,36 @@
 #include "libft.h"
 #include <string.h>
 
+
 int main()
 {
-	char s[]= "lorem ipsum dolor sit amet, consectetur adipiscing";
-	
-	printf("%s\n", ft_substr(s, 7, 10));
+	// char s[] = "teste";
+	// int c = 'e';
+
+	// char *prueba = ft_strchr(s, 0);
+	// char *prueba2 = ft_strrchr(s, 0);
+	// printf("%p - %s\n", prueba, prueba);
+	// printf("%p - %s\n", prueba2, prueba2);
+
+	char str[] = "teste";
+	int str2 = 1024;
+	char str3[] = "teste";
+	int str4 = 1024;
+
+	printf("1 - %s - %p-\n", strchr(str, str2), strchr(str, str2));
+	printf("2 - %s - %p-\n", ft_strchr(str3, str4), ft_strchr(str3, str4));
+
 	return(0);
 }
+
+
+// int main()
+// {
+// 	char s[]= "lorem ipsum dolor sit amet, consectetur adipiscing";
+	
+// 	printf("%s\n", ft_substr(s, 7, 10));
+// 	return(0);
+// }
 
 //ft_isalpha
 // int main()

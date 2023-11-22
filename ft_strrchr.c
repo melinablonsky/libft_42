@@ -14,20 +14,20 @@
 
 char	*ft_strrchr (const char *s, int c)
 {
-	int i;
+	int	i;
 	int	last_occurrence;
 
 	i = 0;
 	last_occurrence = -1;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			last_occurrence = i;
 		}
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 	{
 		return ((char *)&s[i]);
 	}
@@ -35,7 +35,7 @@ char	*ft_strrchr (const char *s, int c)
 	{
 		return ((char *)&s[last_occurrence]);
 	}
-	return NULL;
+	return (NULL);
 }
 
 

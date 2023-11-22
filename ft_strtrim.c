@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 14:02:45 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/19 14:02:50 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/22 20:27:32 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char *ft_strtrim(char const *s1, char const *set)
 	int i_end_trim;
 
 	i = 0;
+	if (!s1 || !set)
+		return NULL;
 	while (s1[i] && ft_strchr(set, s1[i]))
 	{
 		i++;

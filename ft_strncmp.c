@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 10:53:49 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/10/19 16:13:13 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/22 16:11:03 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-
+	size_t			i;
 	unsigned char	*s1_c;
 	unsigned char	*s2_c;
 
 	i = 0;
-	s1_c = (unsigned char*)s1;
-	s2_c = (unsigned char*)s2;
-	while (i<n && (s1_c[i] || s2_c[i]))
+	s1_c = (unsigned char *)s1;
+	s2_c = (unsigned char *)s2;
+	while (i < n && (s1_c[i] || s2_c[i]))
 	{
 		if (s1_c[i] != s2_c[i])
 		{
@@ -30,7 +29,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return (0);	
+	return (0);
 }
 
 /*

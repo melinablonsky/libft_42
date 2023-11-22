@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:27:48 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/18 20:27:52 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/22 17:36:09 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*ptr_src;
 	size_t		i;
 
+	if(!dst || !src )
+	{
+		return (NULL);
+	}
 	ptr_dst = (char *)dst;
 	ptr_src = src;
 	i = 0;
@@ -39,25 +43,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-int main ()
-{
-	// SI NO SE SOLAPAN:
-	char dst[10];
-	char src[10];
-
-	memset(dst, 'a', 4);
-	memset(src, 'b', 3);
-
-	ft_memmove(dst, src, 3);
-	printf("ft = %s\n", dst);
-
-	char *dst2;
-	char src2[]="1234";
-	dst2 =&src2[1];
-
-	ft_memmove(dst2, src2, 3);
-	printf("ft = %s\n", dst2);
-}
-*/
