@@ -14,34 +14,21 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 	
 	i = 0;
-	while (i < dstsize -1  && src[i] !='\0')
+	if(dstsize != 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (i < dstsize -1 && src[i] !='\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	while (src[i] !='\0')
 	{
 		i++;
 	}
-	return i;
+	return (i);
 }
-
-/*
-int main()
-{
-	char dst[] = "hola";
-	char src[] = "chau";
-	
-	size_t result = ft_strlcpy(dst, src, 3);
-	printf("Q = %zu\n", result);
-	printf("ft_strlcpy  = %s\n",dst);
-	
-	strlcpy(dst, src, 3);
-	printf("strlcpy =  %s\n", dst);
-	return (0);
-}
-*/

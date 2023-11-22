@@ -1,5 +1,13 @@
 #include "libft.h"
+#include <string.h>
 
+int main()
+{
+	char s[]= "lorem ipsum dolor sit amet, consectetur adipiscing";
+	
+	printf("%s\n", ft_substr(s, 7, 10));
+	return(0);
+}
 
 //ft_isalpha
 // int main()
@@ -243,3 +251,4 @@ int main()
 }
 
 */
+

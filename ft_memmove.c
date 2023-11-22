@@ -43,21 +43,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 /*
 int main ()
 {
-    // SI NO SE SOLAPAN:
-    char dst[10];
-    char src[10];
+	// SI NO SE SOLAPAN:
+	char dst[10];
+	char src[10];
 
-    memset(dst, 'a', 4);
-    memset(src, 'b', 3);
+	memset(dst, 'a', 4);
+	memset(src, 'b', 3);
 
-    ft_memmove(dst, src, 3);
+	ft_memmove(dst, src, 3);
 	printf("ft = %s\n", dst);
 
-    char *dst2;
-    char src2[]="1234";
-    dst2 =&src2[1];
+	char *dst2;
+	char src2[]="1234";
+	dst2 =&src2[1];
 
-    ft_memmove(dst2, src2, 3);
+	ft_memmove(dst2, src2, 3);
 	printf("ft = %s\n", dst2);
 }
 */

@@ -17,14 +17,23 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t i;
 	size_t j;
 
+	size_t	len_dst;
+	size_t	len_src;
+
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(src);
+
 	j = 0;
 	while (dst[j] != '\0')
 	{
 		j++;
 	}
-
+	if(j >= dstsize)
+	{
+		return (j);
+	}
 	i = 0;
-	while (i < dstsize -1 && src[i] !='\0')
+	while (j < dstsize -1 && src[i] !='\0')
 	{
 		dst[j] = src[i];
 		j++;
@@ -35,21 +44,5 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		i++;
 	}
-	return j;
+	return (len_dst + len_src);
 }
-
-/*
-int main()
-{
-	char dst[] = "hola";
-	char src[] = "chauuuu";
-
-	size_t result = ft_strlcat(dst, src, 5);
-	printf("q = %zu\n", result);
-	printf("ft_strlcat = %s\n", dst);
-
-	strlcat(dst, src, 5);
-	printf("strlcat = %s\n",dst);
-	return (0);
-}
-*/
