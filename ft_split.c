@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 20:05:46 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/16 11:52:50 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:31:13 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**function_alloc_parts(char *str, char c)
+static char	**aux_count_strings(char *str, char c)
 {
 	int		i;
 	int		parts_count;
 	int		checkpoint;
-	char	**parts;
+	char	**array;
 
 	i = 0;
 	parts_count = 0;
@@ -31,13 +31,13 @@ static char	**function_alloc_parts(char *str, char c)
 		if (i > checkpoint)
 			parts_count++;
 	}
-	parts = ft_calloc(parts_count + 1, sizeof(char *));
-	if (!parts)
+	array = ft_calloc(parts_count + 1, sizeof(char *));
+	if (!array)
 		return (NULL);
-	return (parts);
+	return (array);
 }
 
-static int	function_count_valid_chars(char *str, char c)
+static int	aux_count_chars(char *str, char c)
 {
 	int	i;
 
@@ -49,7 +49,7 @@ static int	function_count_valid_chars(char *str, char c)
 	return (i);
 }
 
-static void	function_free_parts(char **parts, int j)
+static void	aux_free_strings(char **parts, int j)
 {
 	while (j--)
 	{
@@ -58,7 +58,7 @@ static void	function_free_parts(char **parts, int j)
 	free(parts);
 }
 
-static char	**function_fill_parts(char **parts, char *str, char c)
+static char	**aux_complete_strings(char **parts, char *str, char c)
 {
 	int	i;
 	int	j;
@@ -70,13 +70,13 @@ static char	**function_fill_parts(char **parts, char *str, char c)
 	{
 		while (str[i] && str[i] == c)
 			i++;
-		valid_char_count = function_count_valid_chars(&str[i], c);
+		valid_char_count = aux_count_chars(&str[i], c);
 		if (valid_char_count > 0)
 		{
 			parts[j] = ft_substr(str, i, valid_char_count);
 			if (!parts[j])
 			{
-				function_free_parts(parts, j);
+				aux_free_strings(parts, j);
 				return (NULL);
 			}
 			j++;
@@ -89,7 +89,7 @@ static char	**function_fill_parts(char **parts, char *str, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**parts;
+	char	**array;
 	char	*str;
 
 	str = (char *)s;
@@ -97,11 +97,11 @@ char	**ft_split(char const *s, char c)
 	{
 		return (NULL);
 	}
-	parts = function_alloc_parts(str, c);
-	if (!parts)
+	array = aux_count_strings(str, c);
+	if (!array)
 	{
 		return (NULL);
 	}
-	parts = function_fill_parts(parts, str, c);
-	return (parts);
+	array = aux_complete_strings(array, str, c);
+	return (array);
 }

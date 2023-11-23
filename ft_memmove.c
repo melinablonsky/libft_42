@@ -6,7 +6,7 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:27:48 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/22 17:36:09 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:41:17 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const char	*ptr_src;
 	size_t		i;
 
-	if(!dst || !src )
-	{
+	if (!dst || !src)
 		return (NULL);
-	}
 	ptr_dst = (char *)dst;
 	ptr_src = src;
 	i = 0;

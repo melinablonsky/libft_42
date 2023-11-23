@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 15:34:10 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/10/08 17:08:02 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:52:21 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr (const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 	int	last_occurrence;
@@ -37,27 +37,3 @@ char	*ft_strrchr (const char *s, int c)
 	}
 	return (NULL);
 }
-
-
-/*
-int	main (void)
-{
-	char	*string = "aall";
-	int c = 'a';
-
-	char	*result = ft_strrchr(string, c);
-	printf("%s\n", result);
-
-	result = ft_strrchr("aall", 'a');
-	printf("all = %s\n", result);
-
-	result = ft_strrchr("aaaa",'\0');
-	printf("  = %s\n", result);
-
-	result = ft_strrchr("", 'a');
-	printf("NULL = %s\n", result);
-
-	result = ft_strrchr("", '\0');
-	printf(" = %s\n", result);
-}
-*/
