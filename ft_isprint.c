@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:20:40 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/09/20 11:40:01 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 21:21:43 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,3 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	int	m;
-
-	m = ft_isprint(123);
-	printf ("%i\n", m);
-	return (0);
-}
-*/

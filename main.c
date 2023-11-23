@@ -6,32 +6,64 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:19:30 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/23 17:43:05 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 21:29:18 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
+
+int main()
+{
+char str[]= "-123";
+
+printf("%d\n", ft_atoi(str));
+return (0);
+}
+
+
+/*int	main(void)
+{
+	int	m;
+
+	m = ft_isprint(12388766);
+	printf ("%i\n", m);
+	return (0);
+}
+*/
+
+/*
+int main()
+{
+	char s[] = "hola que tal";
+	char c = ' ';
+	int i;
+	i = 0;
+
+	char **result;
+	
+	result = ft_split( s , c);
+
+	while(result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
+}
+*/
+/*
 int main()
 {
 	int n = -12345;
 	int fd = 2;
-	
-	// ft_putnbr_fd( n, fd);
 
-	char dest[100];
-	char dest2[100];
-	memset(dest, 'A', 100);
-	memset(dest2, 'A', 100);
-	ft_memcpy(dest, "coucou", 0);
-	memcpy(dest2, "coucou", 0);
-	char *rtn = (char *)ft_memcpy(dest, NULL, 0);
-char *rtn2 = (char *)memcpy(dest, NULL, 0);
-	printf("%p - %s\n", rtn2, rtn2);
-	printf("%p - %s\n", rtn, rtn);
+	ft_putnbr_fd( n, fd);
 	return(0);
 }
+*/
 
 /*int	main(void)
 {
