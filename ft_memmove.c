@@ -6,13 +6,13 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:27:48 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/23 17:54:18 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 23:38:19 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	funct_bucle1(int len, char *ptr_dst, const char *ptr_src)
+static void	aux_reverse_asign(int len, char *ptr_dst, const char *ptr_src)
 {
 	while (len > 0)
 	{
@@ -34,7 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (ptr_dst > ptr_src)
 	{
-		funct_bucle1(len, ptr_dst, ptr_src);
+		aux_reverse_asign(len, ptr_dst, ptr_src);
 	}
 	else
 	{
