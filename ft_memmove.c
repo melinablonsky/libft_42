@@ -6,11 +6,20 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:27:48 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/23 15:41:17 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:54:18 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	funct_bucle1(int len, char *ptr_dst, const char *ptr_src)
+{
+	while (len > 0)
+	{
+		ptr_dst[len - 1] = ptr_src[len -1];
+		len--;
+	}
+}
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -25,11 +34,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (ptr_dst > ptr_src)
 	{
-		while (len > 0)
-		{
-			ptr_dst[len - 1] = ptr_src[len - 1];
-			len--;
-		}
+		funct_bucle1(len, ptr_dst, ptr_src);
 	}
 	else
 	{
