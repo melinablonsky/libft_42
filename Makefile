@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+         #
+#    By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 12:25:57 by mblonsky          #+#    #+#              #
-#    Updated: 2023/11/15 12:36:14 by mblonsky         ###   ########.fr        #
+#    Updated: 2023/11/24 16:21:14 by mblonsky         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,4 +60,4 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 re: fclean all
-	.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus
