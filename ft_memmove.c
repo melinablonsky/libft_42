@@ -6,7 +6,7 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:27:48 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/23 23:38:19 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:10:44 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,18 @@ static void	aux_reverse_asign(int len, char *ptr_dst, const char *ptr_src)
 	}
 }
 
+static void	aux_asign(int len, char *ptr_dst, const char *ptr_src)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		ptr_dst[i] = ptr_src[i];
+		i++;
+	}
+}
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*ptr_dst;
@@ -30,7 +42,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!dst || !src)
 		return (NULL);
 	ptr_dst = (char *)dst;
-	ptr_src = src;
+	ptr_src = (char *)src;
 	i = 0;
 	if (ptr_dst > ptr_src)
 	{
@@ -38,11 +50,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i < len)
-		{
-			ptr_dst[i] = ptr_src[i];
-			i++;
-		}
+		aux_asign(len, ptr_dst, ptr_src);
 	}
 	return (dst);
 }

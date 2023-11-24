@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:10:26 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/09/20 11:19:25 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:26:41 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	int	m;
-
-	m = ft_isascii(128);
-	printf ("%i\n", m);
-	return (0);
-}
-*/

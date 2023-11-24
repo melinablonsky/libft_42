@@ -6,7 +6,7 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:25:30 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/22 19:23:06 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:51:12 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ int	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
-/*
-int	main(void)
-{
-	char lstr[] = "hola";
-	printf("%i\n", ft_strlen(lstr));
-	return (0);
-}
-*/

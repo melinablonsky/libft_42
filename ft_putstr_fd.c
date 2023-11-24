@@ -6,7 +6,7 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 12:13:00 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/23 23:20:23 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:40:14 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s != NULL)
+	if (s != NULL || fd >= 0)
 	{
 		write(fd, s, ft_strlen(s));
 	}

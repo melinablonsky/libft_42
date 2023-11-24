@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:25:13 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/18 20:25:22 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:39:40 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-int main ()
-{
-	char *ptr;
-	ptr = ft_memchr("hola", 'l', 4);
-	printf("la = %s\n", ptr);
-
-	ptr = memchr("hola", 'l', 4);
-	printf( "la = %s\n", ptr);
-	
-}
-*/

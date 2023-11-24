@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mblonsky <mblonsky@student.42madrid>       +#+  +:+       +#+        */
+/*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 14:29:39 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/10/26 12:12:09 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:29:19 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main (void)
-{
-	const void *s1_c = "abc";
-	const void *s2_c = "123";
-	unsigned int n = 3;
-	int result = ft_memcmp(s1_c, s2_c, n);
-	printf("48 = %d\n", result);
-
-	result = ft_memcmp("ab", "ac", 2);
-	printf("menor = %d\n", result);
-}
-*/

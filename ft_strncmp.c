@@ -6,7 +6,7 @@
 /*   By: mblonsky <mblonsky@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 10:53:49 by mblonsky          #+#    #+#             */
-/*   Updated: 2023/11/22 16:11:03 by mblonsky         ###   ########.fr       */
+/*   Updated: 2023/11/24 12:52:34 by mblonsky         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,39 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int	main (void)
-{
-	char	*s1_c = "abc";
-	char	*s2_c = "abc";
-	unsigned int	n = 3;
-	int	result = ft_strncmp(s1_c, s2_c, n);
-	printf("0 = %d\n", result);
-
-	result = ft_strncmp("abc","abc", 2);
-	printf("0 = %d\n", result);
-
-	result = ft_strncmp("ab","ac", 2);
-	printf("<1 = %d\n", result);
-
-	result = ft_strncmp("bc","ac", 2);
-	printf("1 = %d\n", result);
-
-	result = ft_strncmp("abc","ab", 3);
-	printf(">1 = %d\n", result);
-
-	result = ft_strncmp("ab","abc", 3);
-	printf("<1 = %d\n", result);
-
-	result = ft_strncmp("ab","abc", 2);
-	printf("0 = %d\n", result);
-
-	result = ft_strncmp("abc","ab", 2);
-	printf("0 = %d\n", result);
-
-	result = ft_strncmp("","a", 1);
-	printf("%d\n", result);
-
-}
-*/
